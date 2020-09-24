@@ -19,3 +19,10 @@ local.properties
 /android/build/intermediates/javac/debug/classes/
 /shared/build/
 /shared/build/intermediates/javac/debug/classes/
+
+# Xcode
+*.xcworkspacedata
+*.xcuserstate
+*.xcscheme
+xcschememanagement.plist
+*.xcbkptlist
