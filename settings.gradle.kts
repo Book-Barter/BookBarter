@@ -17,5 +17,5 @@ rootProject.name = "BookBarter"
 
 
 include(":android")
-include(":shared")
+include(":common")
 

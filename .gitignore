@@ -17,8 +17,8 @@ local.properties
 # Project exclude paths
 /android/build/
 /android/build/intermediates/javac/debug/classes/
-/shared/build/
-/shared/build/intermediates/javac/debug/classes/
+/common/build/
+/common/build/intermediates/javac/debug/classes/
 
 # Xcode
 *.xcworkspacedata

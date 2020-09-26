@@ -1,9 +1,9 @@
 package com.github.mustafaozhan.bookbarter.android
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.github.mustafaozhan.bookbarter.shared.Greeting
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.github.mustafaozhan.bookbarter.common.Greeting
 
 fun greet(): String {
     return Greeting().greeting()
