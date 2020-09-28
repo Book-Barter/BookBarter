@@ -13,8 +13,7 @@ pluginManagement {
         }
     }
 }
-rootProject.name = "BookBarter"
-
+rootProject.name = ProjectSettings.projectName
 
 include(":android")
 include(":common")

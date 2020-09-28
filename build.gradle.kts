@@ -6,12 +6,14 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0")
-        classpath("com.android.tools.build:gradle:4.2.0-alpha02")
+        with(ClassPaths) {
+            classpath(kotlinGradlePlugin)
+            classpath(androidBuildTools)
+        }
     }
 }
-group = "com.github.mustafaozhan.bookbarter"
-version = "1.0-SNAPSHOT"
+group = ProjectSettings.applicationId
+version = ProjectSettings.getVersionName(project)
 
 repositories {
     mavenCentral()
