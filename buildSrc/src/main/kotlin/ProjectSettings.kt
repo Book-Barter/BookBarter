@@ -11,7 +11,6 @@ object ProjectSettings {
     private const val mayorVersion = 0
     private const val minorVersion = 0
 
-    const val projectName = "BookBarter"
     const val projectId = "com.github.mustafaozhan.bookbarter"
     const val projectCompileSdkVersion = 29
     const val projectMinSdkVersion = 21

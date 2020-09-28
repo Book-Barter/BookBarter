@@ -1,6 +1,6 @@
 plugins {
     with(Plugins) {
-        id(application)
+        id(androidApplication)
         kotlin(android)
     }
 }
@@ -16,7 +16,7 @@ repositories {
 dependencies {
     implementation(project(Modules.common))
 
-    with(Dependencies) {
+    with(Dependencies.Android) {
         implementation(androidMaterial)
         implementation(constraintLayout)
     }

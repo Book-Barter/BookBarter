@@ -5,16 +5,31 @@ object Versions {
     const val androidPluginVersion = "4.2.0-alpha02"
     const val androidMaterialVersion = "1.2.0"
     const val constraintLayoutVersion = "1.1.3"
+    const val jUnitVersion = "4.13"
 }
 
 object Dependencies {
-    const val androidMaterial =
-        "com.google.android.material:material:${Versions.androidMaterialVersion}"
-    const val constraintLayout =
-        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+    object Common {
+        const val testCommon = "test-common"
+        const val testAnnotationsCommon = "test-annotations-common"
+    }
+
+    object Android {
+        const val androidMaterial =
+            "com.google.android.material:material:${Versions.androidMaterialVersion}"
+        const val constraintLayout =
+            "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+    }
+
+    object IOS
 }
 
-object TestDependencies
+object TestDependencies {
+    object Android {
+        const val jUnit = "junit:junit:${Versions.jUnitVersion}"
+        const val testJUnit = "test-junit"
+    }
+}
 
 object Annotations
 
@@ -30,6 +45,8 @@ object Modules {
 }
 
 object Plugins {
-    const val application = "com.android.application"
+    const val androidApplication = "com.android.application"
     const val android = "android"
+    const val androidLibrary = "com.android.library"
+    const val multiplatform = "multiplatform"
 }
