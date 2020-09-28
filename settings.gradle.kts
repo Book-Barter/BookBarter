@@ -1,3 +1,4 @@
+// Do not use buildSrc here
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -13,8 +14,7 @@ pluginManagement {
         }
     }
 }
-rootProject.name = ProjectSettings.projectName
+rootProject.name = "BookBarter"
 
 include(":android")
 include(":common")
-

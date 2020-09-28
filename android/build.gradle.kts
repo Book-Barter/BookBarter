@@ -1,10 +1,11 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    id("kotlin-android-extensions")
+    with(Plugins) {
+        id(application)
+        kotlin(android)
+    }
 }
-group = "com.github.mustafaozhan.bookbarter"
-version = "1.0-SNAPSHOT"
+group = ProjectSettings.projectId
+version = ProjectSettings.getVersionName(project)
 
 repositories {
     gradlePluginPortal()
@@ -13,23 +14,22 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    implementation(project(":common"))
-    implementation("com.google.android.material:material:1.2.0")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation(project(Modules.common))
+
+    with(Dependencies) {
+        implementation(androidMaterial)
+        implementation(constraintLayout)
+    }
 }
 android {
-    compileSdkVersion(29)
-    defaultConfig {
-        applicationId = "com.github.mustafaozhan.bookbarter.android"
-        minSdkVersion(24)
-        targetSdkVersion(29)
-        versionCode = 1
-        versionName = "1.0"
-    }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
+    with(ProjectSettings) {
+        compileSdkVersion(projectCompileSdkVersion)
+        defaultConfig {
+            applicationId = "$projectId.android"
+            minSdkVersion(projectMinSdkVersion)
+            targetSdkVersion(projectTargetSdkVersion)
+            versionCode = getVersionCode(project)
+            versionName = getVersionName(project)
         }
     }
 }

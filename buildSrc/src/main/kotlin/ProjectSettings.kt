@@ -12,7 +12,7 @@ object ProjectSettings {
     private const val minorVersion = 0
 
     const val projectName = "BookBarter"
-    const val applicationId = "com.github.mustafaozhan.bookbarter"
+    const val projectId = "com.github.mustafaozhan.bookbarter"
     const val projectCompileSdkVersion = 29
     const val projectMinSdkVersion = 21
     const val projectTargetSdkVersion = 29

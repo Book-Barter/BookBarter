@@ -1,9 +1,18 @@
+@file:Suppress("SpellCheckingInspection")
+
 object Versions {
     const val kotlinVersion = "1.4.0"
-    const val androidPluginVersion = "4.0.1"
+    const val androidPluginVersion = "4.2.0-alpha02"
+    const val androidMaterialVersion = "1.2.0"
+    const val constraintLayoutVersion = "1.1.3"
 }
 
-object Dependencies
+object Dependencies {
+    const val androidMaterial =
+        "com.google.android.material:material:${Versions.androidMaterialVersion}"
+    const val constraintLayout =
+        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+}
 
 object TestDependencies
 
@@ -20,4 +29,7 @@ object Modules {
     const val common = ":common"
 }
 
-object Plugins
+object Plugins {
+    const val application = "com.android.application"
+    const val android = "android"
+}

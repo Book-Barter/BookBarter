@@ -12,7 +12,7 @@ buildscript {
         }
     }
 }
-group = ProjectSettings.applicationId
+group = ProjectSettings.projectId
 version = ProjectSettings.getVersionName(project)
 
 repositories {
