@@ -25,7 +25,7 @@ object Dependencies {
 }
 
 object TestDependencies {
-    object Android {
+    object Common {
         const val jUnit = "junit:junit:${Versions.jUnitVersion}"
         const val testJUnit = "test-junit"
     }
@@ -46,7 +46,9 @@ object Modules {
 
 object Plugins {
     const val androidApplication = "com.android.application"
+    const val application = "application"
     const val android = "android"
     const val androidLibrary = "com.android.library"
     const val multiplatform = "multiplatform"
+    const val platformJvm = "kotlin-platform-jvm"
 }

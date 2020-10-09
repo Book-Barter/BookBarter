@@ -13,6 +13,10 @@ pluginManagement {
         }
     }
 }
+rootProject.name = "BookBarter"
 
-include(":android")
-include(":common")
+include(
+    ":android",
+    ":common",
+    ":backend"
+)

@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+.idea
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
@@ -19,6 +20,10 @@ local.properties
 /android/build/intermediates/javac/debug/classes/
 /common/build/
 /common/build/intermediates/javac/debug/classes/
+/ios/build/
+/ios/build/intermediates/javac/debug/classes/
+/jvm/build/
+/jvm/build/intermediates/javac/debug/classes/
 
 # Xcode
 *.xcworkspacedata
