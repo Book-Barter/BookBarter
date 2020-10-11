@@ -16,7 +16,11 @@ repositories {
     mavenCentral()
 }
 kotlin {
+
+    jvm()
+
     android()
+
     ios {
         binaries {
             framework {
@@ -24,6 +28,7 @@ kotlin {
             }
         }
     }
+
     @Suppress("UNUSED_VARIABLE")
     sourceSets {
 
@@ -35,6 +40,13 @@ kotlin {
             }
         }
 
+        val jvmMain by getting
+        val jvmTest by getting {
+            dependencies {
+                implementation(TestDependencies.Common.jUnit)
+            }
+        }
+
         val androidMain by getting {
             dependencies {
                 implementation(Dependencies.Android.androidMaterial)
@@ -42,8 +54,8 @@ kotlin {
         }
         val androidTest by getting {
             dependencies {
-                implementation(kotlin(TestDependencies.Android.testJUnit))
-                implementation(TestDependencies.Android.jUnit)
+                implementation(kotlin(TestDependencies.Common.testJUnit))
+                implementation(TestDependencies.Common.jUnit)
             }
         }
         val iosMain by getting

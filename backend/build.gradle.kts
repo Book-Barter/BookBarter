@@ -1,6 +1,6 @@
 plugins {
     id(Plugins.platformJvm)
-    id("org.gradle.application")
+    application
 }
 
 dependencies {
