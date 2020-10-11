@@ -10,8 +10,6 @@ version = ProjectSettings.getVersionName(project)
 repositories {
     gradlePluginPortal()
     google()
-    jcenter()
-    mavenCentral()
 }
 dependencies {
     implementation(project(Modules.common))
