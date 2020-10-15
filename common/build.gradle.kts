@@ -27,6 +27,14 @@ kotlin {
         }
     }
 
+    js {
+        browser {
+            testTask {
+                enabled = false
+            }
+        }
+    }
+
     @Suppress("UNUSED_VARIABLE")
     sourceSets {
 
@@ -45,6 +53,9 @@ kotlin {
             }
         }
 
+        val jsMain by getting
+        val jsTest by getting
+
         val androidMain by getting {
             dependencies {
                 implementation(Dependencies.Android.androidMaterial)
@@ -52,7 +63,6 @@ kotlin {
         }
         val androidTest by getting {
             dependencies {
-                implementation(kotlin(TestDependencies.Common.testJUnit))
                 implementation(TestDependencies.Common.jUnit)
             }
         }

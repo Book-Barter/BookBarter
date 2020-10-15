@@ -44,15 +44,12 @@ object Dependencies {
             "org.jetbrains:kotlin-react:16.13.1-pre.110-kotlin-${Versions.kotlinVersion}"
         const val kotlinReactDom =
             "org.jetbrains:kotlin-react-dom:16.13.1-pre.110-kotlin-${Versions.kotlinVersion}"
-        const val kotlinReactDomRooter =
-            "org.jetbrains:kotlin-react-router-dom:5.1.2-pre.110-kotlin-${Versions.kotlinVersion}"
     }
 }
 
 object TestDependencies {
     object Common {
         const val jUnit = "junit:junit:${Versions.jUnitVersion}"
-        const val testJUnit = "test-junit"
     }
 }
 
