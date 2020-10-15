@@ -1,3 +1,5 @@
+enableFeaturePreview("GRADLE_METADATA")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -18,5 +20,6 @@ rootProject.name = "BookBarter"
 include(
     ":android",
     ":common",
-    ":backend"
+    ":backend",
+    ":web"
 )

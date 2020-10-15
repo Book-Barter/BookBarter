@@ -8,6 +8,8 @@ object Versions {
     const val jUnitVersion = "4.13"
     const val ktorVersion = "1.4.0"
     const val logBackVersion = "1.2.3"
+    const val kotlinXHtmlVersion = "0.7.2"
+    const val npmReactVersion = "16.13.0"
 }
 
 object Dependencies {
@@ -29,6 +31,21 @@ object Dependencies {
         const val ktorWebSockets = "io.ktor:ktor-websockets:${Versions.ktorVersion}"
         const val ktorSerialization = "io.ktor:ktor-serialization:${Versions.ktorVersion}"
         const val logBack = "ch.qos.logback:logback-classic:${Versions.logBackVersion}"
+    }
+
+    object Web {
+        const val kotlinXHtml =
+            "org.jetbrains.kotlinx:kotlinx-html-js:${Versions.kotlinXHtmlVersion}"
+
+        const val react = "react"
+        const val reactDom = "react-dom"
+
+        const val kotlinReact =
+            "org.jetbrains:kotlin-react:16.13.1-pre.110-kotlin-${Versions.kotlinVersion}"
+        const val kotlinReactDom =
+            "org.jetbrains:kotlin-react-dom:16.13.1-pre.110-kotlin-${Versions.kotlinVersion}"
+        const val kotlinReactDomRooter =
+            "org.jetbrains:kotlin-react-router-dom:5.1.2-pre.110-kotlin-${Versions.kotlinVersion}"
     }
 }
 
@@ -60,4 +77,5 @@ object Plugins {
     const val multiplatform = "multiplatform"
     const val platformJvm = "kotlin-platform-jvm"
     const val serializationPlugin = "plugin.serialization"
+    const val js = "js"
 }
