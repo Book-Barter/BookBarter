@@ -5,6 +5,7 @@ plugins {
     }
     application
 }
+
 dependencies {
     implementation(project(Modules.common))
 

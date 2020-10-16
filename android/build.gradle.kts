@@ -11,6 +11,7 @@ repositories {
     gradlePluginPortal()
     google()
 }
+
 dependencies {
     implementation(project(Modules.common))
 
@@ -19,6 +20,7 @@ dependencies {
         implementation(constraintLayout)
     }
 }
+
 android {
     with(ProjectSettings) {
         compileSdkVersion(projectCompileSdkVersion)

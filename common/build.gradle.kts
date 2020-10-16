@@ -6,6 +6,7 @@ plugins {
         id(androidLibrary)
     }
 }
+
 group = ProjectSettings.projectId
 version = ProjectSettings.getVersionName(project)
 
@@ -13,6 +14,7 @@ repositories {
     gradlePluginPortal()
     google()
 }
+
 kotlin {
 
     jvm()
@@ -70,6 +72,7 @@ kotlin {
         val iosTest by getting
     }
 }
+
 android {
     with(ProjectSettings) {
         compileSdkVersion(projectTargetSdkVersion)
@@ -84,6 +87,7 @@ android {
         sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     }
 }
+
 val packForXcode by tasks.creating(Sync::class) {
     group = "build"
     val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
@@ -97,4 +101,5 @@ val packForXcode by tasks.creating(Sync::class) {
     from({ framework.outputDirectory })
     into(targetDir)
 }
+
 tasks.getByName("build").dependsOn(packForXcode)

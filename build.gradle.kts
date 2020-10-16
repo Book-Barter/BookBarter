@@ -11,6 +11,7 @@ buildscript {
         }
     }
 }
+
 group = ProjectSettings.projectId
 version = ProjectSettings.getVersionName(project)
 
@@ -19,4 +20,8 @@ allprojects {
         mavenCentral()
         jcenter()
     }
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
 }

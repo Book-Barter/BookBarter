@@ -17,10 +17,13 @@ dependencies {
     implementation(project(Modules.common))
 }
 
-
 kotlin {
     js {
         useCommonJs()
         browser()
     }
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
 }
