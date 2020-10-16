@@ -23,7 +23,3 @@ kotlin {
         browser()
     }
 }
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
-}
