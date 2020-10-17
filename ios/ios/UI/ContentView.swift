@@ -1,13 +1,9 @@
 import SwiftUI
 import common
 
-func greet() -> String {
-    return Greeting().greeting()
-}
-
 struct ContentView: View {
     var body: some View {
-        Text(greet())
+        Text(Platform().name)
     }
 }
 

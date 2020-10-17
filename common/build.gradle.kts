@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ */
+
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
@@ -6,17 +10,21 @@ plugins {
         id(androidLibrary)
     }
 }
+
 group = ProjectSettings.projectId
 version = ProjectSettings.getVersionName(project)
 
 repositories {
     gradlePluginPortal()
     google()
-    jcenter()
-    mavenCentral()
 }
+
 kotlin {
+
+    jvm()
+
     android()
+
     ios {
         binaries {
             framework {
@@ -24,6 +32,15 @@ kotlin {
             }
         }
     }
+
+    js {
+        browser {
+            testTask {
+                enabled = false
+            }
+        }
+    }
+
     @Suppress("UNUSED_VARIABLE")
     sourceSets {
 
@@ -35,6 +52,16 @@ kotlin {
             }
         }
 
+        val jvmMain by getting
+        val jvmTest by getting {
+            dependencies {
+                implementation(TestDependencies.Common.jUnit)
+            }
+        }
+
+        val jsMain by getting
+        val jsTest by getting
+
         val androidMain by getting {
             dependencies {
                 implementation(Dependencies.Android.androidMaterial)
@@ -42,14 +69,14 @@ kotlin {
         }
         val androidTest by getting {
             dependencies {
-                implementation(kotlin(TestDependencies.Android.testJUnit))
-                implementation(TestDependencies.Android.jUnit)
+                implementation(TestDependencies.Common.jUnit)
             }
         }
         val iosMain by getting
         val iosTest by getting
     }
 }
+
 android {
     with(ProjectSettings) {
         compileSdkVersion(projectTargetSdkVersion)
@@ -64,6 +91,7 @@ android {
         sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     }
 }
+
 val packForXcode by tasks.creating(Sync::class) {
     group = "build"
     val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
@@ -77,4 +105,5 @@ val packForXcode by tasks.creating(Sync::class) {
     from({ framework.outputDirectory })
     into(targetDir)
 }
+
 tasks.getByName("build").dependsOn(packForXcode)

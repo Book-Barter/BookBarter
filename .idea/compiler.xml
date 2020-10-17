@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="11">
+      <module name="BookBarter.common.commonMain" target="1.6" />
+      <module name="BookBarter.common.commonTest" target="1.6" />
+      <module name="BookBarter.common.jvmMain" target="1.6" />
+      <module name="BookBarter.common.jvmTest" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>

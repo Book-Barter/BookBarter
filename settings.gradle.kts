@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ */
+
+enableFeaturePreview("GRADLE_METADATA")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -13,6 +19,11 @@ pluginManagement {
         }
     }
 }
+rootProject.name = "BookBarter"
 
-include(":android")
-include(":common")
+include(
+    ":android",
+    ":common",
+    ":backend",
+    ":web"
+)

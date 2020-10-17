@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+.idea
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
@@ -13,12 +14,6 @@
 .externalNativeBuild
 .cxx
 local.properties
-
-# Project exclude paths
-/android/build/
-/android/build/intermediates/javac/debug/classes/
-/common/build/
-/common/build/intermediates/javac/debug/classes/
 
 # Xcode
 *.xcworkspacedata

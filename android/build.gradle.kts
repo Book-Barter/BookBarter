@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ */
+
 plugins {
     with(Plugins) {
         id(androidApplication)
@@ -10,9 +14,8 @@ version = ProjectSettings.getVersionName(project)
 repositories {
     gradlePluginPortal()
     google()
-    jcenter()
-    mavenCentral()
 }
+
 dependencies {
     implementation(project(Modules.common))
 
@@ -21,6 +24,7 @@ dependencies {
         implementation(constraintLayout)
     }
 }
+
 android {
     with(ProjectSettings) {
         compileSdkVersion(projectCompileSdkVersion)

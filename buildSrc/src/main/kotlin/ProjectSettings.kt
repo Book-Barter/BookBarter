@@ -1,6 +1,7 @@
 /*
- Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
+
 import org.gradle.api.Project
 import java.io.File
 import java.io.IOException
