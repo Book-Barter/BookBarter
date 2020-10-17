@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ */
+
 plugins {
     with(Plugins) {
         id(androidApplication)

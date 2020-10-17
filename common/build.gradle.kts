@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ */
+
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {

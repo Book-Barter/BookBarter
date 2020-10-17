@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ */
+
 package com.github.mustafaozhan.bookbarter.backend
 
 import com.github.mustafaozhan.bookbarter.common.Greeting

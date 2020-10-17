@@ -1,9 +1,13 @@
+/*
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ */
+
 package com.github.mustafaozhan.bookbarter.common
 
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class GreetingTest {
+class IOSTest {
 
     @Test
     fun testExample() {

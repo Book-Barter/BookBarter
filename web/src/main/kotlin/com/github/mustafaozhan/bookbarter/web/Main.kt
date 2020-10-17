@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ */
+
 package com.github.mustafaozhan.bookbarter.web
 
 import com.github.mustafaozhan.bookbarter.common.Greeting
@@ -8,11 +12,10 @@ import react.dom.render
 import react.dom.tr
 import react.functionalComponent
 
-
-private const val rootId = "root"
+private const val ROOT_ID = "root"
 
 fun main() = render(
-    document.getElementById(rootId)
+    document.getElementById(ROOT_ID)
 ) {
     child(
         functionalComponent {
