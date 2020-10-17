@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.web
 
-import com.github.mustafaozhan.bookbarter.common.Greeting
+import com.github.mustafaozhan.bookbarter.common.Platform
 import kotlinx.browser.document
 import react.child
 import react.dom.h1
@@ -22,11 +22,7 @@ fun main() = render(
             h1 {
                 +"Book Barters"
             }
-            tr { +greet() }
+            tr { +Platform().name }
         }
     )
-}
-
-fun greet(): String {
-    return Greeting().greeting()
 }

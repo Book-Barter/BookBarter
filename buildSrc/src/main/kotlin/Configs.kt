@@ -13,7 +13,6 @@ object Versions {
     const val ktorVersion = "1.4.0"
     const val logBackVersion = "1.2.3"
     const val kotlinXHtmlVersion = "0.7.2"
-    const val npmReactVersion = "16.13.0"
 }
 
 object Dependencies {
@@ -40,10 +39,6 @@ object Dependencies {
     object Web {
         const val kotlinXHtml =
             "org.jetbrains.kotlinx:kotlinx-html-js:${Versions.kotlinXHtmlVersion}"
-
-        const val react = "react"
-        const val reactDom = "react-dom"
-
         const val kotlinReact =
             "org.jetbrains:kotlin-react:16.13.1-pre.110-kotlin-${Versions.kotlinVersion}"
         const val kotlinReactDom =

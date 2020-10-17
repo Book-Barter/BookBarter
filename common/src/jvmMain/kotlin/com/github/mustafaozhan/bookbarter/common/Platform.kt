@@ -4,6 +4,6 @@
 
 package com.github.mustafaozhan.bookbarter.common
 
-actual class Platform actual constructor() {
-    actual val platform: String = "JVM"
+actual class Platform {
+    actual val name = "JVM"
 }

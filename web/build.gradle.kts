@@ -15,8 +15,6 @@ dependencies {
 
         implementation(kotlinReact)
         implementation(kotlinReactDom)
-        implementation(npm(react, Versions.npmReactVersion))
-        implementation(npm(reactDom, Versions.npmReactVersion))
     }
     implementation(project(Modules.common))
 }

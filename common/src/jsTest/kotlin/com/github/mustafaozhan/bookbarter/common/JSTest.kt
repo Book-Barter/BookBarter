@@ -11,6 +11,6 @@ class JSTest {
 
     @Test
     fun testExample() {
-        assertTrue(Greeting().greeting().contains("JS"), "Check JS is mentioned")
+        assertTrue(Platform().name.contains("JS"), "Check JS is mentioned")
     }
 }

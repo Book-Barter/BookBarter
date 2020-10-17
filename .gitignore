@@ -15,16 +15,6 @@
 .cxx
 local.properties
 
-# Project exclude paths
-/android/build/
-/android/build/intermediates/javac/debug/classes/
-/common/build/
-/common/build/intermediates/javac/debug/classes/
-/ios/build/
-/ios/build/intermediates/javac/debug/classes/
-/jvm/build/
-/jvm/build/intermediates/javac/debug/classes/
-
 # Xcode
 *.xcworkspacedata
 *.xcuserstate

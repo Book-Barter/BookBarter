@@ -11,6 +11,6 @@ class JVMTest {
 
     @Test
     fun testExample() {
-        assertTrue("Check JVM is mentioned", Greeting().greeting().contains("JVM"))
+        assertTrue("Check JVM is mentioned", Platform().name.contains("JVM"))
     }
 }

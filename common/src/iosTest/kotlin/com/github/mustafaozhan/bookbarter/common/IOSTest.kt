@@ -11,6 +11,6 @@ class IOSTest {
 
     @Test
     fun testExample() {
-        assertTrue(Greeting().greeting().contains("iOS"), "Check iOS is mentioned")
+        assertTrue(Platform().name.contains("iOS"), "Check iOS is mentioned")
     }
 }
