@@ -17,3 +17,7 @@ dependencies {
         implementation(logBack)
     }
 }
+
+application {
+    mainClass.set("${ProjectSettings.projectId}.backend.MainKt")
+}

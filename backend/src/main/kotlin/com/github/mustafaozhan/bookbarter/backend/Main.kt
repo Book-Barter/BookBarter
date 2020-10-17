@@ -1,5 +1,6 @@
 package com.github.mustafaozhan.bookbarter.backend
 
+import com.github.mustafaozhan.bookbarter.common.Greeting
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
@@ -35,10 +36,13 @@ fun main() {
         routing {
             get(pathRoot) {
                 this::class.java.classLoader.getResource(indexHtml)?.readText()?.let {
-                    call.respondText(it, ContentType.Text.Html)
+                    call.respondText(greet(), ContentType.Text.Html)
                 }
             }
         }
-
     }.start(wait = true)
+}
+
+fun greet(): String {
+    return Greeting().greeting()
 }
