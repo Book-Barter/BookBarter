@@ -40,12 +40,3 @@ jobs:
           SLACK_TITLE: FAILED
           SLACK_USERNAME: CI
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      - name: Slack Notification CANCELLED
-          if: ${{ cancelled() }}
-          uses: rtCamp/action-slack-notify@master
-          env:
-            SLACK_COLOR: '#FF9800'
-            SLACK_ICON: https://www.seekicon.com/free-icon-download/ci-icon_2.svg
-            SLACK_TITLE: CANCELLED
-            SLACK_USERNAME: CI
-            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
