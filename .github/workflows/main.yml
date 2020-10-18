@@ -16,12 +16,11 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build --parallel
 
-  slackNotification:
-    name: Slack Notification
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@master
         env:
+          SLACK_COLOR: '#3278BD'
+          SLACK_ICON: https://www.seekicon.com/free-icon-download/ci-icon_2.svg
+          SLACK_TITLE: Commit
+          SLACK_USERNAME: CI
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
