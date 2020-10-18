@@ -10,7 +10,7 @@ plugins {
 }
 
 dependencies {
-    with(Dependencies.Web) {
+    with(Dependencies.JS) {
         implementation(kotlinXHtml)
 
         implementation(kotlinReact)

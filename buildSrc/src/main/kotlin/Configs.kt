@@ -17,8 +17,9 @@ object Versions {
 
 object Dependencies {
     object Common {
-        const val testCommon = "test-common"
-        const val testAnnotationsCommon = "test-annotations-common"
+        const val stdLib = "stdlib-common"
+        const val test = "test-common"
+        const val testAnnotations = "test-annotations-common"
     }
 
     object Android {
@@ -26,9 +27,17 @@ object Dependencies {
             "com.google.android.material:material:${Versions.androidMaterialVersion}"
         const val constraintLayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+
+        const val jUnit = "junit:junit:${Versions.jUnitVersion}"
     }
 
-    object Backend {
+    object IOS
+
+    object JVM {
+        const val stdLib = "stdlib-jdk8"
+        const val test = "test"
+        const val testJUnit = "test-junit"
+
         const val ktorCore = "io.ktor:ktor-server-core:${Versions.ktorVersion}"
         const val ktorNetty = "io.ktor:ktor-server-netty:${Versions.ktorVersion}"
         const val ktorWebSockets = "io.ktor:ktor-websockets:${Versions.ktorVersion}"
@@ -36,19 +45,16 @@ object Dependencies {
         const val logBack = "ch.qos.logback:logback-classic:${Versions.logBackVersion}"
     }
 
-    object Web {
+    object JS {
+        const val stdLib = "stdlib-js"
+        const val test = "test-js"
+
         const val kotlinXHtml =
             "org.jetbrains.kotlinx:kotlinx-html-js:${Versions.kotlinXHtmlVersion}"
         const val kotlinReact =
             "org.jetbrains:kotlin-react:16.13.1-pre.110-kotlin-${Versions.kotlinVersion}"
         const val kotlinReactDom =
             "org.jetbrains:kotlin-react-dom:16.13.1-pre.110-kotlin-${Versions.kotlinVersion}"
-    }
-}
-
-object TestDependencies {
-    object Common {
-        const val jUnit = "junit:junit:${Versions.jUnitVersion}"
     }
 }
 

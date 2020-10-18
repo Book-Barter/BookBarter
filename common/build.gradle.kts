@@ -44,36 +44,62 @@ kotlin {
     @Suppress("UNUSED_VARIABLE")
     sourceSets {
 
-        val commonMain by getting
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin(Dependencies.Common.testCommon))
-                implementation(kotlin(Dependencies.Common.testAnnotationsCommon))
+        with(Dependencies.Common) {
+            val commonMain by getting {
+                dependencies {
+                    implementation(kotlin(stdLib))
+                }
+            }
+            val commonTest by getting {
+                dependencies {
+                    implementation(kotlin(test))
+                    implementation(kotlin(testAnnotations))
+                }
             }
         }
 
-        val jvmMain by getting
-        val jvmTest by getting {
-            dependencies {
-                implementation(TestDependencies.Common.jUnit)
+        with(Dependencies.Android) {
+            val androidMain by getting {
+                dependencies {
+                    implementation(androidMaterial)
+                }
+            }
+            val androidTest by getting {
+                dependencies {
+                    implementation(jUnit)
+                }
             }
         }
 
-        val jsMain by getting
-        val jsTest by getting
-
-        val androidMain by getting {
-            dependencies {
-                implementation(Dependencies.Android.androidMaterial)
-            }
-        }
-        val androidTest by getting {
-            dependencies {
-                implementation(TestDependencies.Common.jUnit)
-            }
-        }
         val iosMain by getting
         val iosTest by getting
+
+        with(Dependencies.JVM) {
+            val jvmMain by getting {
+                dependencies {
+                    implementation(kotlin(stdLib))
+                }
+            }
+            val jvmTest by getting {
+                dependencies {
+                    implementation(kotlin(test))
+                    implementation(kotlin(testJUnit))
+                }
+            }
+        }
+
+        with(Dependencies.JS) {
+            val jsMain by getting {
+                dependencies {
+                    implementation(kotlin(stdLib))
+                }
+            }
+            val jsTest by getting {
+                dependencies {
+                    implementation(kotlin(test))
+                }
+            }
+        }
     }
 }
 

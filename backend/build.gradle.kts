@@ -13,7 +13,7 @@ plugins {
 dependencies {
     implementation(project(Modules.common))
 
-    with(Dependencies.Backend) {
+    with(Dependencies.JVM) {
         implementation(ktorCore)
         implementation(ktorNetty)
         implementation(ktorWebSockets)
