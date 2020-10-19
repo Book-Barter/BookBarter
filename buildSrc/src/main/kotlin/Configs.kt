@@ -14,6 +14,7 @@ object Versions {
     const val logBack = "1.3.0-alpha5"
     const val kotlinXHtml = "0.7.2"
     const val versionChecker = "0.33.0"
+    const val react = "16.13.1-pre.110"
 }
 
 object Dependencies {
@@ -52,9 +53,9 @@ object Dependencies {
 
         const val kotlinXHtml = "org.jetbrains.kotlinx:kotlinx-html-js:${Versions.kotlinXHtml}"
         const val kotlinReact =
-            "org.jetbrains:kotlin-react:16.13.1-pre.110-kotlin-${Versions.kotlin}"
+            "org.jetbrains:kotlin-react:${Versions.react}-kotlin-${Versions.kotlin}"
         const val kotlinReactDom =
-            "org.jetbrains:kotlin-react-dom:16.13.1-pre.110-kotlin-${Versions.kotlin}"
+            "org.jetbrains:kotlin-react-dom:${Versions.react}-kotlin-${Versions.kotlin}"
     }
 }
 
@@ -65,7 +66,6 @@ object ClassPaths {
 }
 
 object Modules {
-    const val android = ":android"
     const val common = ":common"
 }
 
@@ -75,7 +75,7 @@ object Plugins {
     const val android = "android"
     const val androidLibrary = "com.android.library"
     const val multiplatform = "multiplatform"
-    const val platformJvm = "kotlin-platform-jvm"
+    const val platformJvm = "jvm"
     const val serializationPlugin = "plugin.serialization"
     const val js = "js"
     const val versionChecker = "com.github.ben-manes.versions"

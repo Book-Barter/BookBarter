@@ -33,8 +33,9 @@ kotlin {
         }
     }
 
-    js {
+    js(IR) {
         browser {
+            binaries.executable()
             testTask {
                 enabled = false
             }

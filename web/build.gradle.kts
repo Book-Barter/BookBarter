@@ -20,8 +20,10 @@ dependencies {
 }
 
 kotlin {
-    js {
+    js(IR) {
         useCommonJs()
-        browser()
+        browser {
+            binaries.executable()
+        }
     }
 }

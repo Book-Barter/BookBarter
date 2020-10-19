@@ -4,7 +4,7 @@
 
 plugins {
     with(Plugins) {
-        id(platformJvm)
+        kotlin(platformJvm)
         kotlin(serializationPlugin)
     }
     application
