@@ -2,6 +2,10 @@
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
 
+plugins {
+    id(Plugins.versionChecker) version Versions.versionChecker
+}
+
 buildscript {
     repositories {
         gradlePluginPortal()

@@ -5,14 +5,15 @@
 @file:Suppress("SpellCheckingInspection")
 
 object Versions {
-    const val kotlinVersion = "1.4.10"
-    const val androidPluginVersion = "4.2.0-alpha13"
-    const val androidMaterialVersion = "1.2.0"
-    const val constraintLayoutVersion = "1.1.3"
-    const val jUnitVersion = "4.13"
-    const val ktorVersion = "1.4.0"
-    const val logBackVersion = "1.2.3"
-    const val kotlinXHtmlVersion = "0.7.2"
+    const val kotlin = "1.4.10"
+    const val androidPlugin = "4.2.0-alpha13"
+    const val androidMaterial = "1.3.0-alpha03"
+    const val constraintLayout = "2.0.2"
+    const val jUnit = "4.13.1"
+    const val ktor = "1.4.1"
+    const val logBack = "1.3.0-alpha5"
+    const val kotlinXHtml = "0.7.2"
+    const val versionChecker = "0.33.0"
 }
 
 object Dependencies {
@@ -24,11 +25,11 @@ object Dependencies {
 
     object Android {
         const val androidMaterial =
-            "com.google.android.material:material:${Versions.androidMaterialVersion}"
+            "com.google.android.material:material:${Versions.androidMaterial}"
         const val constraintLayout =
-            "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+            "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 
-        const val jUnit = "junit:junit:${Versions.jUnitVersion}"
+        const val jUnit = "junit:junit:${Versions.jUnit}"
     }
 
     object IOS
@@ -38,32 +39,29 @@ object Dependencies {
         const val test = "test"
         const val testJUnit = "test-junit"
 
-        const val ktorCore = "io.ktor:ktor-server-core:${Versions.ktorVersion}"
-        const val ktorNetty = "io.ktor:ktor-server-netty:${Versions.ktorVersion}"
-        const val ktorWebSockets = "io.ktor:ktor-websockets:${Versions.ktorVersion}"
-        const val ktorSerialization = "io.ktor:ktor-serialization:${Versions.ktorVersion}"
-        const val logBack = "ch.qos.logback:logback-classic:${Versions.logBackVersion}"
+        const val ktorCore = "io.ktor:ktor-server-core:${Versions.ktor}"
+        const val ktorNetty = "io.ktor:ktor-server-netty:${Versions.ktor}"
+        const val ktorWebSockets = "io.ktor:ktor-websockets:${Versions.ktor}"
+        const val ktorSerialization = "io.ktor:ktor-serialization:${Versions.ktor}"
+        const val logBack = "ch.qos.logback:logback-classic:${Versions.logBack}"
     }
 
     object JS {
         const val stdLib = "stdlib-js"
         const val test = "test-js"
 
-        const val kotlinXHtml =
-            "org.jetbrains.kotlinx:kotlinx-html-js:${Versions.kotlinXHtmlVersion}"
+        const val kotlinXHtml = "org.jetbrains.kotlinx:kotlinx-html-js:${Versions.kotlinXHtml}"
         const val kotlinReact =
-            "org.jetbrains:kotlin-react:16.13.1-pre.110-kotlin-${Versions.kotlinVersion}"
+            "org.jetbrains:kotlin-react:16.13.1-pre.110-kotlin-${Versions.kotlin}"
         const val kotlinReactDom =
-            "org.jetbrains:kotlin-react-dom:16.13.1-pre.110-kotlin-${Versions.kotlinVersion}"
+            "org.jetbrains:kotlin-react-dom:16.13.1-pre.110-kotlin-${Versions.kotlin}"
     }
 }
 
 object ClassPaths {
-    const val androidBuildTools = "com.android.tools.build:gradle:${Versions.androidPluginVersion}"
-    const val kotlinGradlePlugin =
-        "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinVersion}"
-    const val kotlinSerialization =
-        "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlinVersion}"
+    const val androidBuildTools = "com.android.tools.build:gradle:${Versions.androidPlugin}"
+    const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    const val kotlinSerialization = "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}"
 }
 
 object Modules {
@@ -80,4 +78,5 @@ object Plugins {
     const val platformJvm = "kotlin-platform-jvm"
     const val serializationPlugin = "plugin.serialization"
     const val js = "js"
+    const val versionChecker = "com.github.ben-manes.versions"
 }
