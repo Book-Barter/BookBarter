@@ -6,7 +6,7 @@
 
 object Versions {
     const val kotlin = "1.4.10"
-    const val androidPlugin = "4.2.0-alpha13"
+    const val androidPlugin = "4.2.0-alpha14"
     const val androidMaterial = "1.3.0-alpha03"
     const val constraintLayout = "2.0.2"
     const val jUnit = "4.13.1"
@@ -71,7 +71,6 @@ object Modules {
 
 object Plugins {
     const val androidApplication = "com.android.application"
-    const val application = "application"
     const val android = "android"
     const val androidLibrary = "com.android.library"
     const val multiplatform = "multiplatform"
