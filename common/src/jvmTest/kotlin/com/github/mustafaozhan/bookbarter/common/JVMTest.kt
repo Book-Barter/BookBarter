@@ -4,6 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.common
 
+import com.github.mustafaozhan.bookbarter.common.repository.PlatformRepository
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -11,6 +12,6 @@ class JVMTest {
 
     @Test
     fun testExample() {
-        assertTrue("Check JVM is mentioned", Platform().name.contains("JVM"))
+        assertTrue("Check JVM is mentioned", PlatformRepository().name.contains("JVM"))
     }
 }

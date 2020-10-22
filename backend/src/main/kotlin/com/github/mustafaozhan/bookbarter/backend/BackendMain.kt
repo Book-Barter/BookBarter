@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.backend
 
-import com.github.mustafaozhan.bookbarter.common.Platform
+import com.github.mustafaozhan.bookbarter.common.repository.PlatformRepository
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
@@ -41,7 +41,7 @@ fun main() {
             get(PATH_ROOT) {
                 this::class.java.classLoader.getResource(INDEX_HTML)
                     ?.readText()?.let {
-                        call.respondText(Platform().name, ContentType.Text.Html)
+                        call.respondText(PlatformRepository().name, ContentType.Text.Html)
                     }
             }
         }

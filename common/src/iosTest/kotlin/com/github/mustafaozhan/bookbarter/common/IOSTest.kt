@@ -4,6 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.common
 
+import com.github.mustafaozhan.bookbarter.common.repository.PlatformRepository
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
@@ -11,6 +12,6 @@ class IOSTest {
 
     @Test
     fun testExample() {
-        assertTrue(Platform().name.contains("iOS"), "Check iOS is mentioned")
+        assertTrue(PlatformRepository().name.contains("iOS"), "Check iOS is mentioned")
     }
 }

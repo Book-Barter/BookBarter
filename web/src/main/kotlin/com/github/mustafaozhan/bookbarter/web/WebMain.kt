@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.web
 
-import com.github.mustafaozhan.bookbarter.common.Platform
+import com.github.mustafaozhan.bookbarter.common.repository.PlatformRepository
 import kotlinx.browser.document
 import react.child
 import react.dom.h1
@@ -22,7 +22,7 @@ fun main() = render(
             h1 {
                 +"Book Barters"
             }
-            tr { +Platform().name }
+            tr { +PlatformRepository().name }
         }
     )
 }
