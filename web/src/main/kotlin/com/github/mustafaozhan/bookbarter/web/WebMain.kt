@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.web
 
-import com.github.mustafaozhan.bookbarter.common.repository.PlatformRepository
+import com.github.mustafaozhan.bookbarter.common.viewmodel.AppViewModel
 import kotlinx.browser.document
 import react.child
 import react.dom.h1
@@ -14,6 +14,8 @@ import react.functionalComponent
 
 private const val ROOT_ID = "root"
 
+private val appViewModel = AppViewModel()
+
 fun main() = render(
     document.getElementById(ROOT_ID)
 ) {
@@ -22,7 +24,7 @@ fun main() = render(
             h1 {
                 +"Book Barters"
             }
-            tr { +PlatformRepository().name }
+            tr { +appViewModel.getPlatformName() }
         }
     )
 }

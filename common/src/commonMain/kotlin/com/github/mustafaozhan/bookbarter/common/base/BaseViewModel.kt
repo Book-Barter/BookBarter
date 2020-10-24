@@ -4,4 +4,5 @@
 
 package com.github.mustafaozhan.bookbarter.common.base
 
+@Suppress("EmptyDefaultConstructor")
 expect open class BaseViewModel()

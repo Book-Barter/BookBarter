@@ -4,6 +4,6 @@
 
 package com.github.mustafaozhan.bookbarter.common.repository
 
-actual class PlatformRepository {
+internal actual class PlatformRepository {
     actual val name = "iOS"
 }

@@ -4,4 +4,4 @@
 
 package com.github.mustafaozhan.bookbarter.common.base
 
-actual open class BaseViewModel actual constructor()
+actual open class BaseViewModel
