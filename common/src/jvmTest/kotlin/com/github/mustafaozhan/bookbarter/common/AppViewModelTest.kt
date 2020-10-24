@@ -4,14 +4,16 @@
 
 package com.github.mustafaozhan.bookbarter.common
 
-import com.github.mustafaozhan.bookbarter.common.repository.PlatformRepository
+import com.github.mustafaozhan.bookbarter.common.viewmodel.AppViewModel
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
-class JVMTest {
+class AppViewModelTest {
+
+    private val vm = AppViewModel()
 
     @Test
     fun testExample() {
-        assertTrue("Check JVM is mentioned", PlatformRepository().name.contains("JVM"))
+        assertTrue("Check JVM is mentioned", vm.getPlatformName().contains("JVM"))
     }
 }

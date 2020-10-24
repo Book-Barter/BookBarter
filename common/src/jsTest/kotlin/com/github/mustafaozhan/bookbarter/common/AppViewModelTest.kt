@@ -4,14 +4,16 @@
 
 package com.github.mustafaozhan.bookbarter.common
 
-import com.github.mustafaozhan.bookbarter.common.repository.PlatformRepository
+import com.github.mustafaozhan.bookbarter.common.viewmodel.AppViewModel
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class IOSTest {
+class AppViewModelTest {
+
+    private val vm = AppViewModel()
 
     @Test
     fun testExample() {
-        assertTrue(PlatformRepository().name.contains("iOS"), "Check iOS is mentioned")
+        assertTrue(vm.getPlatformName().contains("JS"), "Check JS is mentioned")
     }
 }

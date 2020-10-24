@@ -14,7 +14,7 @@ object Versions {
     const val logBack = "1.3.0-alpha5"
     const val kotlinXHtml = "0.7.2"
     const val versionChecker = "0.33.0"
-    const val react = "16.13.1-pre.110"
+    const val react = "16.13.1-pre.124-kotlin-$kotlin"
 }
 
 object Dependencies {
@@ -52,10 +52,8 @@ object Dependencies {
         const val test = "test-js"
 
         const val kotlinXHtml = "org.jetbrains.kotlinx:kotlinx-html-js:${Versions.kotlinXHtml}"
-        const val kotlinReact =
-            "org.jetbrains:kotlin-react:${Versions.react}-kotlin-${Versions.kotlin}"
-        const val kotlinReactDom =
-            "org.jetbrains:kotlin-react-dom:${Versions.react}-kotlin-${Versions.kotlin}"
+        const val kotlinReact = "org.jetbrains:kotlin-react:${Versions.react}"
+        const val kotlinReactDom = "org.jetbrains:kotlin-react-dom:${Versions.react}"
     }
 }
 

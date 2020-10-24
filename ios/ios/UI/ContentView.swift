@@ -2,8 +2,9 @@ import SwiftUI
 import common
 
 struct ContentView: View {
+    var appViewModel = AppViewModel()
     var body: some View {
-        Text(Platform().name)
+        Text(appViewModel.getPlatformName())
     }
 }
 
