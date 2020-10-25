@@ -14,7 +14,7 @@ object Versions {
     const val logBack = "1.3.0-alpha5"
     const val kotlinXHtml = "0.7.2"
     const val versionChecker = "0.33.0"
-    const val react = "16.13.1-pre.124-kotlin-$kotlin"
+    const val react = "17.0.0-pre.126-kotlin-$kotlin"
 }
 
 object Dependencies {

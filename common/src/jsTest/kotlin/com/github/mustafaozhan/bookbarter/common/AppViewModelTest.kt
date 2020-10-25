@@ -4,13 +4,13 @@
 
 package com.github.mustafaozhan.bookbarter.common
 
-import com.github.mustafaozhan.bookbarter.common.viewmodel.AppViewModel
+import com.github.mustafaozhan.bookbarter.common.di.ViewModelInjector
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
 class AppViewModelTest {
 
-    private val vm = AppViewModel()
+    private val vm = ViewModelInjector.appViewModel()
 
     @Test
     fun testExample() {

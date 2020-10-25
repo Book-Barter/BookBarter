@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.web
 
-import com.github.mustafaozhan.bookbarter.common.viewmodel.AppViewModel
+import com.github.mustafaozhan.bookbarter.common.di.ViewModelInjector
 import kotlinx.browser.document
 import react.child
 import react.dom.h1
@@ -14,7 +14,7 @@ import react.functionalComponent
 
 private const val ROOT_ID = "root"
 
-private val appViewModel = AppViewModel()
+private val appViewModel = ViewModelInjector.appViewModel()
 
 fun main() = render(
     document.getElementById(ROOT_ID)

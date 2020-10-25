@@ -5,6 +5,6 @@
 package com.github.mustafaozhan.bookbarter.common.repository
 
 @Suppress("EmptyDefaultConstructor")
-internal expect class PlatformRepository() {
+expect class PlatformRepository() {
     val name: String
 }
