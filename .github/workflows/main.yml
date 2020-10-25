@@ -8,15 +8,24 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: set up JDK 1.8
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
       - name: Build with Gradle
         run: ./gradlew build --parallel
+      - name: Slack Notification FAILED
+        if: ${{ failure() }}
+        uses: rtCamp/action-slack-notify@master
+        env:
+          SLACK_COLOR: '#F44336'
+          SLACK_ICON: https://www.seekicon.com/free-icon-download/ci-icon_2.svg
+          SLACK_TITLE: FAILED
+          SLACK_USERNAME: CI
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
-  slackNotification:
+  postBuild:
     needs: build
     name: Slack Notification
     runs-on: ubuntu-latest
@@ -29,14 +38,5 @@ jobs:
           SLACK_COLOR: '#4CAF50'
           SLACK_ICON: https://www.seekicon.com/free-icon-download/ci-icon_2.svg
           SLACK_TITLE: SUCCESSFUL
-          SLACK_USERNAME: CI
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      - name: Slack Notification FAILED
-        if: ${{ failure() }}
-        uses: rtCamp/action-slack-notify@master
-        env:
-          SLACK_COLOR: '#F44336'
-          SLACK_ICON: https://www.seekicon.com/free-icon-download/ci-icon_2.svg
-          SLACK_TITLE: FAILED
           SLACK_USERNAME: CI
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
