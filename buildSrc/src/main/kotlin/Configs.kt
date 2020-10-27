@@ -19,7 +19,6 @@ object Versions {
 
 object Dependencies {
     object Common {
-        const val stdLib = "stdlib-common"
         const val test = "test-common"
         const val testAnnotations = "test-annotations-common"
     }
@@ -36,8 +35,6 @@ object Dependencies {
     object IOS
 
     object JVM {
-        const val stdLib = "stdlib-jdk8"
-        const val test = "test"
         const val testJUnit = "test-junit"
 
         const val ktorCore = "io.ktor:ktor-server-core:${Versions.ktor}"
@@ -48,7 +45,6 @@ object Dependencies {
     }
 
     object JS {
-        const val stdLib = "stdlib-js"
         const val test = "test-js"
 
         const val kotlinXHtml = "org.jetbrains.kotlinx:kotlinx-html-js:${Versions.kotlinXHtml}"

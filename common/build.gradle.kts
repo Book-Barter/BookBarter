@@ -46,11 +46,7 @@ kotlin {
     sourceSets {
 
         with(Dependencies.Common) {
-            val commonMain by getting {
-                dependencies {
-                    implementation(kotlin(stdLib))
-                }
-            }
+            val commonMain by getting
             val commonTest by getting {
                 dependencies {
                     implementation(kotlin(test))
@@ -76,25 +72,16 @@ kotlin {
         val iosTest by getting
 
         with(Dependencies.JVM) {
-            val jvmMain by getting {
-                dependencies {
-                    implementation(kotlin(stdLib))
-                }
-            }
+            val jvmMain by getting
             val jvmTest by getting {
                 dependencies {
-                    implementation(kotlin(test))
                     implementation(kotlin(testJUnit))
                 }
             }
         }
 
         with(Dependencies.JS) {
-            val jsMain by getting {
-                dependencies {
-                    implementation(kotlin(stdLib))
-                }
-            }
+            val jsMain by getting
             val jsTest by getting {
                 dependencies {
                     implementation(kotlin(test))
