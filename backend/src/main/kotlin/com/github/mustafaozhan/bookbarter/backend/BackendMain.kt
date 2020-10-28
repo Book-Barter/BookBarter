@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.backend
 
-import com.github.mustafaozhan.bookbarter.common.di.ViewModelInjector
+import com.github.mustafaozhan.bookbarter.common.di.DependencyContainer
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
@@ -26,7 +26,7 @@ private const val PATH_ROOT = "/"
 // Resources
 private const val INDEX_HTML = "index.html"
 
-private val appViewModel = ViewModelInjector.appViewModel()
+private val appViewModel = DependencyContainer.appViewModel()
 
 fun main() {
     embeddedServer(

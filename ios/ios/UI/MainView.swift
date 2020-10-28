@@ -2,7 +2,7 @@ import SwiftUI
 import common
 
 struct MainView: View {
-    var appViewModel = ViewModelInjector().appViewModel()
+    var appViewModel = DependencyContainer().appViewModel()
 
     var body: some View {
         Text(appViewModel.getPlatformName())
