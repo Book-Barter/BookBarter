@@ -33,7 +33,9 @@ kotlin {
         }
     }
 
-    js(IR) {
+    // todo need to revert when Koin supports IR
+    // https://github.com/InsertKoinIO/koin/issues/929
+    js {
         browser {
             binaries.executable()
             testTask {
@@ -46,7 +48,11 @@ kotlin {
     sourceSets {
 
         with(Dependencies.Common) {
-            val commonMain by getting
+            val commonMain by getting {
+                dependencies {
+                    api(core)
+                }
+            }
             val commonTest by getting {
                 dependencies {
                     implementation(kotlin(test))
