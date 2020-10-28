@@ -20,9 +20,7 @@ dependencies {
 }
 
 kotlin {
-    // todo need to revert when Koin supports IR
-    // https://github.com/InsertKoinIO/koin/issues/929
-    js {
+    js(IR) {
         useCommonJs()
         browser {
             binaries.executable()

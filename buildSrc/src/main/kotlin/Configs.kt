@@ -14,7 +14,6 @@ object Versions {
     const val logBack = "1.3.0-alpha5"
     const val kotlinXHtml = "0.7.2"
     const val versionChecker = "0.33.0"
-    const val koin = "3.0.0-alpha-4"
     const val react = "17.0.0-pre.126-kotlin-$kotlin"
 }
 
@@ -22,7 +21,6 @@ object Dependencies {
     object Common {
         const val test = "test-common"
         const val testAnnotations = "test-annotations-common"
-        const val core = "org.koin:koin-core:${Versions.koin}"
     }
 
     object Android {
@@ -30,9 +28,6 @@ object Dependencies {
             "com.google.android.material:material:${Versions.androidMaterial}"
         const val constraintLayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
-
-        const val koinAndroid = "org.koin:koin-android:${Versions.koin}"
-        const val androidViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
 
         const val jUnit = "junit:junit:${Versions.jUnit}"
     }
