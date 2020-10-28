@@ -4,7 +4,13 @@
 
 package com.github.mustafaozhan.bookbarter.common.data.repository
 
-@Suppress("EmptyDefaultConstructor")
-expect class PlatformRepository() {
-    val name: String
+import com.github.mustafaozhan.bookbarter.common.data.entity.PlatformEntity
+import com.github.mustafaozhan.bookbarter.common.platformName
+import com.github.mustafaozhan.bookbarter.common.platformVersion
+
+class PlatformRepository {
+    val platform = PlatformEntity(
+        platformName,
+        platformVersion
+    )
 }
