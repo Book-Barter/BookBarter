@@ -41,8 +41,8 @@ fun main() {
 
         routing {
             get(PATH_ROOT) {
-                this::class.java.classLoader.getResource(INDEX_HTML)
-                    .readText().let {
+                this::class.java.classLoader?.getResource(INDEX_HTML)
+                    ?.readText()?.let {
                         call.respondText(appViewModel.getPlatformName(), ContentType.Text.Html)
                     }
             }

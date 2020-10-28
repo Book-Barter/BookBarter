@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.common.di
 
-import com.github.mustafaozhan.bookbarter.common.repository.PlatformRepository
+import com.github.mustafaozhan.bookbarter.common.data.repository.PlatformRepository
 import com.github.mustafaozhan.bookbarter.common.viewmodel.AppViewModel
 
 object ViewModelInjector {
