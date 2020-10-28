@@ -20,7 +20,9 @@ dependencies {
 }
 
 kotlin {
-    js(IR) {
+    // todo need to revert when Kodein supports IR
+    // https://github.com/Kodein-Framework/Kodein-DI/issues/339
+    js {
         useCommonJs()
         browser {
             binaries.executable()
