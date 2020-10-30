@@ -7,11 +7,11 @@ package com.github.mustafaozhan.bookbarter.android
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.github.mustafaozhan.bookbarter.ui.di.DependencyContainer
+import com.github.mustafaozhan.bookbarter.ui.di.ViewModelInjector
 
 class MainActivity : AppCompatActivity() {
 
-    private val appViewModel = DependencyContainer.appViewModel()
+    private val appViewModel = ViewModelInjector.appViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

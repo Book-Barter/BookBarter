@@ -4,13 +4,13 @@
 
 package com.github.mustafaozhan.bookbarter.ui
 
-import com.github.mustafaozhan.bookbarter.ui.di.DependencyContainer
+import com.github.mustafaozhan.bookbarter.ui.di.ViewModelInjector
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class AppViewModelTest {
 
-    private val vm = DependencyContainer.appViewModel()
+    private val vm = ViewModelInjector.appViewModel()
 
     @Test
     fun testExample() {

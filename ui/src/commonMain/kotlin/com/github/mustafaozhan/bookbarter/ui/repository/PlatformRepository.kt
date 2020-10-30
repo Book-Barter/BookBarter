@@ -2,14 +2,14 @@
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
 
-package com.github.mustafaozhan.bookbarter.ui.data.repository
+package com.github.mustafaozhan.bookbarter.ui.repository
 
-import com.github.mustafaozhan.bookbarter.ui.data.entity.PlatformEntity
+import com.github.mustafaozhan.bookbarter.ui.model.Platform
 import com.github.mustafaozhan.bookbarter.ui.platformName
 import com.github.mustafaozhan.bookbarter.ui.platformVersion
 
 class PlatformRepository {
-    val platform = PlatformEntity(
+    val platform = Platform(
         platformName,
         platformVersion
     )
