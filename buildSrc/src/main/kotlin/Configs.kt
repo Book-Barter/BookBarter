@@ -15,15 +15,12 @@ object Versions {
     const val kotlinXHtml = "0.7.2"
     const val versionChecker = "0.33.0"
     const val react = "17.0.0-pre.126-kotlin-$kotlin"
-    const val kodein = "7.1.0"
 }
 
 object Dependencies {
     object Common {
         const val test = "test-common"
         const val testAnnotations = "test-annotations-common"
-
-        const val kodein = "org.kodein.di:kodein-di:${Versions.kodein}"
     }
 
     object Android {

@@ -34,9 +34,7 @@ kotlin {
         }
     }
 
-    // todo need to revert when Kodein supports IR
-    // https://github.com/Kodein-Framework/Kodein-DI/issues/339
-    js {
+    js(IR) {
         browser {
             binaries.executable()
             testTask {
@@ -49,11 +47,7 @@ kotlin {
     sourceSets {
 
         with(Dependencies.Common) {
-            val commonMain by getting {
-                dependencies {
-                    implementation(kodein)
-                }
-            }
+            val commonMain by getting
             val commonTest by getting {
                 dependencies {
                     implementation(kotlin(test))
