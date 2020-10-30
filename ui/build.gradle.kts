@@ -21,9 +21,6 @@ repositories {
 }
 
 kotlin {
-
-    jvm()
-
     android()
 
     ios {
@@ -75,15 +72,6 @@ kotlin {
 
         val iosMain by getting
         val iosTest by getting
-
-        with(Dependencies.JVM) {
-            val jvmMain by getting
-            val jvmTest by getting {
-                dependencies {
-                    implementation(kotlin(testJUnit))
-                }
-            }
-        }
 
         with(Dependencies.JS) {
             val jsMain by getting

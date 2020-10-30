@@ -29,7 +29,7 @@ kotlin {
     ios {
         binaries {
             framework {
-                baseName = "ui"
+                baseName = "data"
             }
         }
     }
