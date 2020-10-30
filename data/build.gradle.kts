@@ -57,11 +57,7 @@ kotlin {
         }
 
         with(Dependencies.Android) {
-            val androidMain by getting {
-                dependencies {
-                    implementation(androidMaterial)
-                }
-            }
+            val androidMain by getting
             val androidTest by getting {
                 dependencies {
                     implementation(jUnit)

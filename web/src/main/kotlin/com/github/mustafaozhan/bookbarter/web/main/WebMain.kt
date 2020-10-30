@@ -2,7 +2,7 @@
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
 
-package com.github.mustafaozhan.bookbarter.web
+package com.github.mustafaozhan.bookbarter.web.main
 
 import com.github.mustafaozhan.bookbarter.ui.di.ViewModelInjector
 import kotlinx.browser.document
@@ -14,7 +14,7 @@ import react.functionalComponent
 
 private const val ROOT_ID = "root"
 
-private val appViewModel = ViewModelInjector.appViewModel()
+private val appViewModel = ViewModelInjector.mainViewModel()
 
 fun main() = render(
     document.getElementById(ROOT_ID)
