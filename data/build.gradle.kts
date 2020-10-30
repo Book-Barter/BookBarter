@@ -47,11 +47,7 @@ kotlin {
     sourceSets {
 
         with(Dependencies.Common) {
-            val commonMain by getting {
-                dependencies {
-                    implementation(project(Modules.data))
-                }
-            }
+            val commonMain by getting
             val commonTest by getting {
                 dependencies {
                     implementation(kotlin(test))

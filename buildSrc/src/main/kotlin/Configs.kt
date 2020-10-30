@@ -61,6 +61,7 @@ object ClassPaths {
 
 object Modules {
     const val ui = ":ui"
+    const val data = ":data"
 }
 
 object Plugins {
