@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.backend
 
-import com.github.mustafaozhan.bookbarter.common.di.DependencyContainer
+import com.github.mustafaozhan.bookbarter.ui.di.DependencyContainer
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation

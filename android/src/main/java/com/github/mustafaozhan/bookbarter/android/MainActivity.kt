@@ -7,7 +7,7 @@ package com.github.mustafaozhan.bookbarter.android
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.github.mustafaozhan.bookbarter.common.di.DependencyContainer
+import com.github.mustafaozhan.bookbarter.ui.di.DependencyContainer
 
 class MainActivity : AppCompatActivity() {
 

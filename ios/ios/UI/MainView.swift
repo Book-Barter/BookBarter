@@ -1,5 +1,5 @@
 import SwiftUI
-import common
+import ui
 
 struct MainView: View {
     var appViewModel = DependencyContainer().appViewModel()

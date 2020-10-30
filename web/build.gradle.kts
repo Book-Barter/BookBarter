@@ -16,7 +16,7 @@ dependencies {
         implementation(kotlinReact)
         implementation(kotlinReactDom)
     }
-    implementation(project(Modules.common))
+    implementation(project(Modules.ui))
 }
 
 kotlin {

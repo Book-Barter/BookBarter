@@ -63,7 +63,7 @@ object ClassPaths {
 }
 
 object Modules {
-    const val common = ":common"
+    const val ui = ":ui"
 }
 
 object Plugins {

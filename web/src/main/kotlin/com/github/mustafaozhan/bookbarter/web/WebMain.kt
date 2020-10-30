@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.web
 
-import com.github.mustafaozhan.bookbarter.common.di.DependencyContainer
+import com.github.mustafaozhan.bookbarter.ui.di.DependencyContainer
 import kotlinx.browser.document
 import react.child
 import react.dom.h1
