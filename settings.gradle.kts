@@ -1,7 +1,6 @@
 /*
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -21,7 +20,8 @@ rootProject.name = "BookBarter"
 
 include(
     ":android",
-    ":common",
+    ":ui",
+    ":data",
     ":backend",
     ":web"
 )

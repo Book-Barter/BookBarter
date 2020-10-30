@@ -11,7 +11,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Modules.common))
+    implementation(project(Modules.data))
 
     with(Dependencies.JVM) {
         implementation(ktorCore)

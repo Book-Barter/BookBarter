@@ -6,7 +6,7 @@
 
 object Versions {
     const val kotlin = "1.4.10"
-    const val androidPlugin = "4.2.0-alpha14"
+    const val androidPlugin = "4.2.0-alpha15"
     const val androidMaterial = "1.3.0-alpha03"
     const val constraintLayout = "2.0.2"
     const val jUnit = "4.13.1"
@@ -14,12 +14,11 @@ object Versions {
     const val logBack = "1.3.0-alpha5"
     const val kotlinXHtml = "0.7.2"
     const val versionChecker = "0.33.0"
-    const val react = "16.13.1-pre.110"
+    const val react = "17.0.0-pre.126-kotlin-$kotlin"
 }
 
 object Dependencies {
     object Common {
-        const val stdLib = "stdlib-common"
         const val test = "test-common"
         const val testAnnotations = "test-annotations-common"
     }
@@ -36,8 +35,6 @@ object Dependencies {
     object IOS
 
     object JVM {
-        const val stdLib = "stdlib-jdk8"
-        const val test = "test"
         const val testJUnit = "test-junit"
 
         const val ktorCore = "io.ktor:ktor-server-core:${Versions.ktor}"
@@ -48,14 +45,11 @@ object Dependencies {
     }
 
     object JS {
-        const val stdLib = "stdlib-js"
         const val test = "test-js"
 
         const val kotlinXHtml = "org.jetbrains.kotlinx:kotlinx-html-js:${Versions.kotlinXHtml}"
-        const val kotlinReact =
-            "org.jetbrains:kotlin-react:${Versions.react}-kotlin-${Versions.kotlin}"
-        const val kotlinReactDom =
-            "org.jetbrains:kotlin-react-dom:${Versions.react}-kotlin-${Versions.kotlin}"
+        const val kotlinReact = "org.jetbrains:kotlin-react:${Versions.react}"
+        const val kotlinReactDom = "org.jetbrains:kotlin-react-dom:${Versions.react}"
     }
 }
 
@@ -66,7 +60,8 @@ object ClassPaths {
 }
 
 object Modules {
-    const val common = ":common"
+    const val ui = ":ui"
+    const val data = ":data"
 }
 
 object Plugins {

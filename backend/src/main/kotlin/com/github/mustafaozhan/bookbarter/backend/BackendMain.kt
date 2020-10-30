@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.backend
 
-import com.github.mustafaozhan.bookbarter.common.Platform
+import com.github.mustafaozhan.bookbarter.data.di.RepositoryInjector
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
@@ -26,6 +26,8 @@ private const val PATH_ROOT = "/"
 // Resources
 private const val INDEX_HTML = "index.html"
 
+private val platformRepository = RepositoryInjector.platformRepository()
+
 fun main() {
     embeddedServer(
         Netty,
@@ -39,9 +41,12 @@ fun main() {
 
         routing {
             get(PATH_ROOT) {
-                this::class.java.classLoader.getResource(INDEX_HTML)
+                this::class.java.classLoader?.getResource(INDEX_HTML)
                     ?.readText()?.let {
-                        call.respondText(Platform().name, ContentType.Text.Html)
+                        call.respondText(
+                            platformRepository.platform.toString(),
+                            ContentType.Text.Html
+                        )
                     }
             }
         }
