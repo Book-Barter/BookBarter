@@ -13,7 +13,7 @@ class PlatformRepositoryTest {
     private val platformRepository = RepositoryInjector.platformRepository()
 
     @Test
-    fun testExample() {
+    fun checkJvmIsMentioned() {
         assertTrue(
             "Check JVM is mentioned",
             platformRepository.platform.name.contains("JVM")

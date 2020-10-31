@@ -13,7 +13,7 @@ class PlatformRepositoryTest {
     private val platformRepository = RepositoryInjector.platformRepository()
 
     @Test
-    fun testExample() {
+    fun checkJsIsMentioned() {
         assertTrue(
             platformRepository.platform.name.contains("JS"),
             "Check JS is mentioned"

@@ -12,7 +12,7 @@ class PlatformRepositoryTest {
     private val platformRepository = RepositoryInjector.platformRepository()
 
     @Test
-    fun testExample() {
+    fun checkIOSIsMentioned() {
         assertTrue(
             platformRepository.platform.name.contains("iOS"),
             "Check iOS is mentioned"
