@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C227324251CF69E0077486F /* BookBarterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C227323251CF69E0077486F /* BookBarterApp.swift */; };
+		5CDA82E8254DFB52006D2C4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDA82E7254DFB52006D2C4B /* Extensions.swift */; };
 		7555FF83242A565900829871 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* MainView.swift */; };
 		7555FF85242A565B00829871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7555FF84242A565B00829871 /* Assets.xcassets */; };
 		7555FF88242A565B00829871 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7555FF87242A565B00829871 /* Preview Assets.xcassets */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		5C227323251CF69E0077486F /* BookBarterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBarterApp.swift; sourceTree = "<group>"; };
+		5CDA82E7254DFB52006D2C4B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7555FF84242A565B00829871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		5CDA82E6254DFB3A006D2C4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5CDA82E7254DFB52006D2C4B /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 			children = (
 				5C227322251CF68A0077486F /* App */,
 				5C227326251CF72E0077486F /* UI */,
+				5CDA82E6254DFB3A006D2C4B /* Extensions */,
 				5C227325251CF7020077486F /* Resources */,
 				7555FF86242A565B00829871 /* Preview Content */,
 			);
@@ -213,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C227324251CF69E0077486F /* BookBarterApp.swift in Sources */,
+				5CDA82E8254DFB52006D2C4B /* Extensions.swift in Sources */,
 				7555FF83242A565900829871 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

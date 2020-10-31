@@ -2,15 +2,15 @@ import SwiftUI
 import ui
 
 struct MainView: View {
-    var appViewModel = ViewModelInjector().appViewModel()
+    var mainViewModel = ViewModelInjector().mainViewModel()
 
     var body: some View {
-        Text(appViewModel.getPlatformName())
+        Text(mainViewModel.getPlatformName())
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct MainViewPreviews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView().makeForPreviewProvider()
     }
 }
