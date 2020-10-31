@@ -23,7 +23,6 @@ dependencies {
         implementation(androidMaterial)
         implementation(constraintLayout)
 
-        implementation(koinAndroid)
         implementation(koinAndroidViewModel)
     }
 }

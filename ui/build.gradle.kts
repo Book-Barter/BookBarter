@@ -64,6 +64,7 @@ kotlin {
             val androidMain by getting {
                 dependencies {
                     implementation(androidMaterial)
+                    implementation(koinAndroidViewModel)
                 }
             }
             val androidTest by getting {
