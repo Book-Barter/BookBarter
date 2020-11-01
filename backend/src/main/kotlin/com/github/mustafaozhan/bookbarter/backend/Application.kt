@@ -4,7 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.backend
 
-import com.github.mustafaozhan.bookbarter.data.di.initKoinJVM
+import com.github.mustafaozhan.bookbarter.data.di.initKoin
 import com.github.mustafaozhan.bookbarter.data.repository.PlatformRepository
 import io.ktor.application.call
 import io.ktor.application.install
@@ -30,7 +30,7 @@ private const val INDEX_HTML = "index.html"
 lateinit var platformRepository: PlatformRepository
 
 fun main() {
-    val app = initKoinJVM()
+    val app = initKoin()
     platformRepository = app.koin.get(PlatformRepository::class)
     embeddedServer(
         Netty,
