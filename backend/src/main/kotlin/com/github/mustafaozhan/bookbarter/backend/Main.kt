@@ -4,7 +4,8 @@
 
 package com.github.mustafaozhan.bookbarter.backend
 
-import com.github.mustafaozhan.bookbarter.data.di.RepositoryInjector
+import com.github.mustafaozhan.bookbarter.data.di.initKoinJVM
+import com.github.mustafaozhan.bookbarter.data.repository.PlatformRepository
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
@@ -26,9 +27,11 @@ private const val PATH_ROOT = "/"
 // Resources
 private const val INDEX_HTML = "index.html"
 
-private val platformRepository = RepositoryInjector.platformRepository()
+lateinit var platformRepository: PlatformRepository
 
 fun main() {
+    val app = initKoinJVM()
+    platformRepository = app.koin.get(PlatformRepository::class)
     embeddedServer(
         Netty,
         port = PORT,
