@@ -2,6 +2,11 @@
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
 
+@file:Suppress("unused")
+/*
+ * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
+ */
+
 package com.github.mustafaozhan.bookbarter.ui.di
 
 import com.github.mustafaozhan.bookbarter.ui.main.MainViewModel
@@ -21,7 +26,7 @@ fun initIOS(): KoinApplication {
     return initKoin()
 }
 
-fun Koin.getIOS(objCClass: ObjCClass): Any {
+fun Koin.getForIOS(objCClass: ObjCClass): Any {
     val kClazz = getOriginalKotlinClass(objCClass)!!
     return get(kClazz, null) { parametersOf(objCClass::class.simpleName) }
 }

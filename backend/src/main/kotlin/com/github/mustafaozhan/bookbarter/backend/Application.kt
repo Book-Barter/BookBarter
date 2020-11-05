@@ -4,6 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.backend
 
+import com.github.mustafaozhan.bookbarter.data.di.getForJvm
 import com.github.mustafaozhan.bookbarter.data.di.initKoin
 import com.github.mustafaozhan.bookbarter.data.repository.PlatformRepository
 import io.ktor.application.call
@@ -26,12 +27,11 @@ private const val PATH_ROOT = "/"
 
 // Resources
 private const val INDEX_HTML = "index.html"
+val app = initKoin()
 
-lateinit var platformRepository: PlatformRepository
+private val platformRepository: PlatformRepository by lazy { app.koin.getForJvm(PlatformRepository::class) }
 
 fun main() {
-    val app = initKoin()
-    platformRepository = app.koin.get(PlatformRepository::class)
     embeddedServer(
         Netty,
         port = PORT,
@@ -44,8 +44,8 @@ fun main() {
 
         routing {
             get(PATH_ROOT) {
-                this::class.java.classLoader?.getResource(INDEX_HTML)
-                    ?.readText()?.let {
+                this::class.java.classLoader.getResource(INDEX_HTML)
+                    ?.readText().let {
                         call.respondText(
                             platformRepository.platform.toString(),
                             ContentType.Text.Html

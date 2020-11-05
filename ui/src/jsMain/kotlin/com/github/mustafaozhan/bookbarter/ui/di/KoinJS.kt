@@ -15,6 +15,6 @@ actual val platformModule: Module = module {
     single { MainViewModel(get()) }
 }
 
-fun <T> Koin.getJs(clazz: KClass<*>): T {
+fun <T> Koin.getForJs(clazz: KClass<*>): T {
     return get(clazz, null) { parametersOf(clazz.simpleName) } as T
 }
