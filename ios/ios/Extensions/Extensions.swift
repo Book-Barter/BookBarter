@@ -10,12 +10,12 @@ import SwiftUI
 
 #if DEBUG
 struct PreviewProviderModifier: ViewModifier {
-    
+
     var includeLightMode: Bool
     var includeDarkMode: Bool
     var includeRightToLeftMode: Bool
     var includeLargeTextMode: Bool
-    
+
     func body(content: Content) -> some View {
         Group {
             if includeLightMode {
@@ -23,19 +23,19 @@ struct PreviewProviderModifier: ViewModifier {
                     .previewDisplayName("Light Mode")
                     .environment(\.colorScheme, .light)
             }
-            
+
             if includeDarkMode {
                 content
                     .previewDisplayName("Dark Mode")
                     .environment(\.colorScheme, .dark)
             }
-            
+
             if includeRightToLeftMode {
                 content
                     .previewDisplayName("Right To Left")
                     .environment(\.layoutDirection, .rightToLeft)
             }
-            
+
             if includeLargeTextMode {
                 content
                     .previewDisplayName("Large Text")
