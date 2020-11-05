@@ -10,9 +10,6 @@ import Foundation
 import SwiftUI
 import ui
 
-import Foundation
-import SwiftUI
-
 struct Koin {
     let koin = KoinIOSKt.doInitIOS().koin
 }
@@ -33,8 +30,9 @@ extension EnvironmentValues {
     }
 }
 
+// swiftlint:disable force_cast
 extension Koin {
     func getMainViewModel() -> MainViewModel {
-        return koin.getIOS(objCClass: MainViewModel.self) as! MainViewModel
+        return koin.getForIOS(objCClass: MainViewModel.self) as! MainViewModel
     }
 }

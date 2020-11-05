@@ -3,7 +3,6 @@ import ui
 
 struct MainView: View {
     var mainViewModel: MainViewModel
-    
 
     var body: some View {
         Text(mainViewModel.getPlatformName())

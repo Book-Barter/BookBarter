@@ -43,7 +43,6 @@ struct PreviewProviderModifier: ViewModifier {
             }
         }
     }
-    
 }
 
 extension View {
@@ -62,6 +61,5 @@ extension View {
             )
         )
     }
-    
 }
 #endif
