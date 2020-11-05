@@ -22,6 +22,8 @@ dependencies {
     with(Dependencies.Android) {
         implementation(androidMaterial)
         implementation(constraintLayout)
+
+        implementation(koinAndroidViewModel)
     }
 }
 

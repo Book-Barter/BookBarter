@@ -4,16 +4,12 @@
 
 package com.github.mustafaozhan.bookbarter.data
 
-import com.github.mustafaozhan.bookbarter.data.di.RepositoryInjector
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
-class PlatformRepositoryTest {
-
-    private val platformRepository = RepositoryInjector.platformRepository()
-
+class PlatformRepositoryTest : BaseRepositoryTest() {
     @Test
-    fun testExample() {
+    fun checkJvmIsMentioned() {
         assertTrue(
             "Check JVM is mentioned",
             platformRepository.platform.name.contains("JVM")

@@ -7,12 +7,15 @@
 //
 
 import SwiftUI
+import ui
 
 @main
 struct BookBarterApp: App {
+    @Environment(\.koin) var koin: Koin
+
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(mainViewModel: koin.getMainViewModel())
         }
     }
 }

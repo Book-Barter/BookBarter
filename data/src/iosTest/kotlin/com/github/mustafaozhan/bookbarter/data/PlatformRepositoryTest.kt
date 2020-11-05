@@ -4,15 +4,12 @@
 
 package com.github.mustafaozhan.bookbarter.data
 
-import com.github.mustafaozhan.bookbarter.data.di.RepositoryInjector
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class PlatformRepositoryTest {
-    private val platformRepository = RepositoryInjector.platformRepository()
-
+class PlatformRepositoryTest : BaseRepositoryTest() {
     @Test
-    fun testExample() {
+    fun checkIOSIsMentioned() {
         assertTrue(
             platformRepository.platform.name.contains("iOS"),
             "Check iOS is mentioned"
