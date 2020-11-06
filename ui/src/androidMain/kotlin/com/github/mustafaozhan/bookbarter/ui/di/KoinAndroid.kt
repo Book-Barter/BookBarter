@@ -12,7 +12,7 @@ import org.koin.core.parameter.parametersOf
 import org.koin.dsl.module
 import kotlin.reflect.KClass
 
-actual val platformModule: Module = module {
+actual val uiModule: Module = module {
     viewModel { MainViewModel(get()) }
 }
 
