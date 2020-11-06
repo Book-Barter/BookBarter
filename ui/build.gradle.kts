@@ -27,6 +27,8 @@ kotlin {
         binaries {
             framework {
                 baseName = "ui"
+                export(Dependencies.Common.kermit)
+                transitiveExport = true
             }
         }
     }

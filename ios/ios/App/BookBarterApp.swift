@@ -15,7 +15,10 @@ struct BookBarterApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainView(mainViewModel: koin.getMainViewModel())
+            MainView(
+                mainViewModel: koin.getMainViewModel(),
+                kermit: koin.getKermit()
+            )
         }
     }
 }
