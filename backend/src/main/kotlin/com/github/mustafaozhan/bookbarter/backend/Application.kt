@@ -4,6 +4,7 @@
 
 package com.github.mustafaozhan.bookbarter.backend
 
+import co.touchlab.kermit.Kermit
 import com.github.mustafaozhan.bookbarter.data.di.getForJvm
 import com.github.mustafaozhan.bookbarter.data.di.initKoin
 import com.github.mustafaozhan.bookbarter.data.repository.PlatformRepository
@@ -30,6 +31,7 @@ private const val INDEX_HTML = "index.html"
 val app = initKoin()
 
 private val platformRepository: PlatformRepository by lazy { app.koin.getForJvm(PlatformRepository::class) }
+private val kermit: Kermit by lazy { app.koin.getForJvm(Kermit::class) }
 
 fun main() {
     embeddedServer(
@@ -37,6 +39,8 @@ fun main() {
         port = PORT,
         host = HOST
     ) {
+
+        kermit.d { "Application main" }
 
         install(ContentNegotiation) {
             json()

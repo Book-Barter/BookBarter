@@ -27,6 +27,8 @@ kotlin {
         binaries {
             framework {
                 baseName = "ui"
+                export(Dependencies.Common.kermit)
+                transitiveExport = true
             }
         }
     }
@@ -50,6 +52,7 @@ kotlin {
                 dependencies {
                     implementation(project(Modules.data))
                     api(koinCore)
+                    api(kermit)
                 }
             }
             val commonTest by getting {

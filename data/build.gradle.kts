@@ -52,6 +52,7 @@ kotlin {
             val commonMain by getting {
                 dependencies {
                     api(koinCore)
+                    api(kermit)
                 }
             }
             val commonTest by getting {
