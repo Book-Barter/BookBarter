@@ -7,6 +7,7 @@ package com.github.mustafaozhan.bookbarter.web.ui
 import com.github.mustafaozhan.bookbarter.ui.di.getForJs
 import com.github.mustafaozhan.bookbarter.ui.main.MainViewModel
 import com.github.mustafaozhan.bookbarter.web.app.AppDependenciesContext
+import com.github.mustafaozhan.bookbarter.web.app.kermit
 import react.RProps
 import react.child
 import react.dom.h1
@@ -19,7 +20,7 @@ private val mainViewModel: MainViewModel by lazy {
 }
 
 val MainView = functionalComponent<RProps> {
-
+    kermit.d { "MainView" }
     child(
         functionalComponent {
             h1 { +"Book Barters" }
