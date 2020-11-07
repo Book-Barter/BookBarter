@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    implementation(project(Modules.ui))
+    implementation(project(Modules.client))
 
     with(Dependencies.Android) {
         implementation(androidMaterial)

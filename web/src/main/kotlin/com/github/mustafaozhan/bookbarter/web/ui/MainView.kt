@@ -4,8 +4,8 @@
 
 package com.github.mustafaozhan.bookbarter.web.ui
 
-import com.github.mustafaozhan.bookbarter.ui.di.getForJs
-import com.github.mustafaozhan.bookbarter.ui.main.MainViewModel
+import com.github.mustafaozhan.bookbarter.client.di.getForJs
+import com.github.mustafaozhan.bookbarter.client.main.MainViewModel
 import com.github.mustafaozhan.bookbarter.web.app.AppDependenciesContext
 import com.github.mustafaozhan.bookbarter.web.app.kermit
 import react.RProps

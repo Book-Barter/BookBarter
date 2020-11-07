@@ -5,8 +5,8 @@
 package com.github.mustafaozhan.bookbarter.web.app
 
 import co.touchlab.kermit.Kermit
-import com.github.mustafaozhan.bookbarter.ui.di.getForJs
-import com.github.mustafaozhan.bookbarter.ui.di.initKoin
+import com.github.mustafaozhan.bookbarter.client.di.getForJs
+import com.github.mustafaozhan.bookbarter.client.di.initKoin
 import com.github.mustafaozhan.bookbarter.web.ui.MainView
 import kotlinx.browser.document
 import org.koin.core.KoinApplication

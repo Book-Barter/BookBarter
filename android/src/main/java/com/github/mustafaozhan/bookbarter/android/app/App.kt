@@ -5,7 +5,7 @@
 package com.github.mustafaozhan.bookbarter.android.app
 
 import android.app.Application
-import com.github.mustafaozhan.bookbarter.ui.di.initKoin
+import com.github.mustafaozhan.bookbarter.client.di.initKoin
 
 class App : Application() {
     override fun onCreate() {

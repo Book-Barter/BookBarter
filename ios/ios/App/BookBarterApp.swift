@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import ui
+import client
 
 @main
 struct BookBarterApp: App {

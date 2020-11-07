@@ -1,5 +1,5 @@
 import SwiftUI
-import ui
+import client
 
 struct MainView: View {
     var mainViewModel: MainViewModel
