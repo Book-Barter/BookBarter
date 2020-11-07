@@ -23,7 +23,7 @@ rootProject.name = "BookBarter"
 include(
     ":android",
     ":client",
-    ":data",
+    ":common",
     ":backend",
     ":web"
 )

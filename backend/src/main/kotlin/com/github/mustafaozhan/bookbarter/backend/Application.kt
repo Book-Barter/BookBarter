@@ -5,9 +5,9 @@
 package com.github.mustafaozhan.bookbarter.backend
 
 import co.touchlab.kermit.Kermit
-import com.github.mustafaozhan.bookbarter.data.di.getForJvm
-import com.github.mustafaozhan.bookbarter.data.di.initKoin
-import com.github.mustafaozhan.bookbarter.data.repository.PlatformRepository
+import com.github.mustafaozhan.bookbarter.common.di.getForJvm
+import com.github.mustafaozhan.bookbarter.common.di.initKoin
+import com.github.mustafaozhan.bookbarter.common.repository.PlatformRepository
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation

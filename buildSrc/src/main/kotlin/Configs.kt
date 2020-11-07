@@ -69,7 +69,7 @@ object ClassPaths {
 
 object Modules {
     const val client = ":client"
-    const val data = ":data"
+    const val common = ":common"
 }
 
 object Plugins {
