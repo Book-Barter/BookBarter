@@ -5,11 +5,13 @@
 package com.github.mustafaozhan.bookbarter.android.app
 
 import android.app.Application
-import com.github.mustafaozhan.bookbarter.client.di.initKoin
+import android.content.Context
+import com.github.mustafaozhan.bookbarter.client.constant.PLATFORM_SETTINGS_NAME
+import com.github.mustafaozhan.bookbarter.client.di.initAndroid
 
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
-        initKoin()
+        initAndroid(getSharedPreferences(PLATFORM_SETTINGS_NAME, Context.MODE_PRIVATE))
     }
 }

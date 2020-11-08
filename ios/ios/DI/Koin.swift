@@ -11,7 +11,9 @@ import SwiftUI
 import client
 
 struct Koin {
-    let koin = KoinIOSKt.doInitIOS().koin
+    let koin = KoinIOSKt.doInitIOS(
+        userDefaults: UserDefaults(suiteName: ConstantKt.PLATFORM_SETTINGS_NAME)!
+    ).koin
 }
 
 struct KoinKey: EnvironmentKey {

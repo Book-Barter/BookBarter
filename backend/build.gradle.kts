@@ -24,5 +24,5 @@ dependencies {
 
 application {
     @Suppress("UnstableApiUsage")
-    mainClass.set("${ProjectSettings.projectId}.backend.ApplicationKt")
+    mainClass.set("${ProjectSettings.projectId}.backend.BackendAppKt")
 }

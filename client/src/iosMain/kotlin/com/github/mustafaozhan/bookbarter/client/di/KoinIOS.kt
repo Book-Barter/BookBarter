@@ -3,27 +3,28 @@
  */
 
 @file:Suppress("unused")
-/*
- * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
- */
 
 package com.github.mustafaozhan.bookbarter.client.di
 
 import com.github.mustafaozhan.bookbarter.client.main.MainViewModel
+import com.russhwolf.settings.AppleSettings
+import com.russhwolf.settings.Settings
 import kotlinx.cinterop.ObjCClass
 import kotlinx.cinterop.getOriginalKotlinClass
 import org.koin.core.Koin
-import org.koin.core.KoinApplication
 import org.koin.core.module.Module
 import org.koin.core.parameter.parametersOf
 import org.koin.dsl.module
+import platform.Foundation.NSUserDefaults
+
+fun initIOS(userDefaults: NSUserDefaults) = initKoin(
+    module {
+        single<Settings> { AppleSettings(userDefaults) }
+    }
+)
 
 actual val clientModule: Module = module {
     single { MainViewModel(get()) }
-}
-
-fun initIOS(): KoinApplication {
-    return initKoin()
 }
 
 fun Koin.getForIOS(objCClass: ObjCClass): Any {

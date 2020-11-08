@@ -51,6 +51,7 @@ kotlin {
             val commonMain by getting {
                 dependencies {
                     implementation(project(Modules.common))
+                    implementation(multiplatformSettings)
                     api(koinCore)
                     api(kermit)
                 }

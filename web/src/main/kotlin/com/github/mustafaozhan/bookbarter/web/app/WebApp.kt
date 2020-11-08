@@ -6,9 +6,10 @@ package com.github.mustafaozhan.bookbarter.web.app
 
 import co.touchlab.kermit.Kermit
 import com.github.mustafaozhan.bookbarter.client.di.getForJs
-import com.github.mustafaozhan.bookbarter.client.di.initKoin
+import com.github.mustafaozhan.bookbarter.client.di.initJS
 import com.github.mustafaozhan.bookbarter.web.ui.MainView
 import kotlinx.browser.document
+import kotlinx.browser.localStorage
 import org.koin.core.KoinApplication
 import react.child
 import react.createContext
@@ -24,7 +25,9 @@ val kermit: Kermit by lazy {
 
 fun main() {
     render(document.getElementById(ROOT_ID)) {
-        AppDependenciesContext.Provider(initKoin()) {
+        AppDependenciesContext.Provider(
+            initJS(localStorage)
+        ) {
             child(MainView)
         }
     }

@@ -17,6 +17,7 @@ object Versions {
     const val react = "17.0.0-pre.129-kotlin-1.4.10"
     const val koin = "3.0.0-alpha-4"
     const val kermit = "0.1.8"
+    const val multiplatformSettings = "0.6.3"
 }
 
 object Dependencies {
@@ -26,6 +27,8 @@ object Dependencies {
 
         const val koinCore = "org.koin:koin-core:${Versions.koin}"
         const val kermit = "co.touchlab:kermit:${Versions.kermit}"
+        const val multiplatformSettings =
+            "com.russhwolf:multiplatform-settings:${Versions.multiplatformSettings}"
     }
 
     object Android {
@@ -34,12 +37,12 @@ object Dependencies {
         const val constraintLayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 
-        const val koinAndroid = "org.koin:koin-android:${Versions.koin}"
         const val koinAndroidViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
 
         const val jUnit = "junit:junit:${Versions.jUnit}"
     }
 
+    @Suppress("unused")
     object IOS
 
     object JVM {
