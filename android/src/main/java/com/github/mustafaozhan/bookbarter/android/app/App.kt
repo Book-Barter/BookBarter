@@ -6,12 +6,12 @@ package com.github.mustafaozhan.bookbarter.android.app
 
 import android.app.Application
 import android.content.Context
-import com.github.mustafaozhan.bookbarter.client.constant.PLATFORM_SETTINGS_NAME
 import com.github.mustafaozhan.bookbarter.client.di.initAndroid
+import com.github.mustafaozhan.bookbarter.client.repo.SettingsRepository.Companion.SETTINGS_NAME
 
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
-        initAndroid(getSharedPreferences(PLATFORM_SETTINGS_NAME, Context.MODE_PRIVATE))
+        initAndroid(getSharedPreferences(SETTINGS_NAME, Context.MODE_PRIVATE))
     }
 }

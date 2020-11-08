@@ -21,7 +21,7 @@ fun initAndroid(sharedPreferences: SharedPreferences) = initKoin(
     }
 )
 
-actual val clientModule: Module = module {
+actual val platformClientModule: Module = module {
     viewModel { MainViewModel(get()) }
 }
 

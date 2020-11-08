@@ -23,7 +23,7 @@ fun initIOS(userDefaults: NSUserDefaults) = initKoin(
     }
 )
 
-actual val clientModule: Module = module {
+actual val platformClientModule: Module = module {
     single { MainViewModel(get()) }
 }
 
