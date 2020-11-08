@@ -5,7 +5,7 @@
 @file:Suppress("SpellCheckingInspection")
 
 object Versions {
-    const val kotlin = "1.4.10"
+    const val kotlin = "1.4.20-RC"
     const val androidPlugin = "4.2.0-alpha16"
     const val androidMaterial = "1.3.0-alpha03"
     const val constraintLayout = "2.0.4"
@@ -13,8 +13,8 @@ object Versions {
     const val ktor = "1.4.1"
     const val logBack = "1.3.0-alpha5"
     const val kotlinXHtml = "0.7.2"
-    const val versionChecker = "0.34.0"
-    const val react = "17.0.0-pre.126-kotlin-1.4.10"
+    const val versionChecker = "0.35.0"
+    const val react = "17.0.0-pre.129-kotlin-1.4.10"
     const val koin = "3.0.0-alpha-4"
     const val kermit = "0.1.8"
 }
