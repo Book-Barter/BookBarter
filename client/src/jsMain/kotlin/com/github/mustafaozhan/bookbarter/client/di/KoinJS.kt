@@ -21,7 +21,7 @@ fun initJS(storage: Storage) = initKoin(
 )
 
 actual val platformClientModule: Module = module {
-    single { MainViewModel(get()) }
+    single { MainViewModel(get(), get()) }
 }
 
 fun <T> Koin.getForJs(clazz: KClass<*>): T {

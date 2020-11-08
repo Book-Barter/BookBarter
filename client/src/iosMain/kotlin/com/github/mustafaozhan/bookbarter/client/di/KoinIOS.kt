@@ -24,7 +24,7 @@ fun initIOS(userDefaults: NSUserDefaults) = initKoin(
 )
 
 actual val platformClientModule: Module = module {
-    single { MainViewModel(get()) }
+    single { MainViewModel(get(), get()) }
 }
 
 fun Koin.getForIOS(objCClass: ObjCClass): Any {

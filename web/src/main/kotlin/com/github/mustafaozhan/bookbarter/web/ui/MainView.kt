@@ -25,6 +25,7 @@ val MainView = functionalComponent<RProps> {
         functionalComponent {
             h1 { +"Book Barters" }
             tr { +mainViewModel.getPlatformName() }
+            tr { +"${mainViewModel.runCounter} times ran" }
         }
     )
 }

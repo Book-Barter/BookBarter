@@ -13,6 +13,7 @@ struct MainView: View {
 
     var body: some View {
         Text(mainViewModel.getPlatformName())
+        Text("\(mainViewModel.runCounter) times ran")
     }
 }
 

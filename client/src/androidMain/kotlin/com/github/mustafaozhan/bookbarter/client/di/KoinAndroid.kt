@@ -22,7 +22,7 @@ fun initAndroid(sharedPreferences: SharedPreferences) = initKoin(
 )
 
 actual val platformClientModule: Module = module {
-    viewModel { MainViewModel(get()) }
+    viewModel { MainViewModel(get(), get()) }
 }
 
 fun <T> Koin.getForAndroid(clazz: KClass<*>): T =
