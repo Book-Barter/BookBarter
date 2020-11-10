@@ -17,6 +17,7 @@ struct MainView: View {
     }
 }
 
+#if DEBUG
 struct MainViewPreviews: PreviewProvider {
     @Environment(\.koin) static var koin: Koin
 
@@ -27,3 +28,4 @@ struct MainViewPreviews: PreviewProvider {
         ).makeForPreviewProvider()
     }
 }
+#endif
