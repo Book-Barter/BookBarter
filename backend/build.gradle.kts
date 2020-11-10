@@ -11,7 +11,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(Modules.data))
+    implementation(project(Modules.common))
 
     with(Dependencies.JVM) {
         implementation(ktorCore)
@@ -24,5 +24,5 @@ dependencies {
 
 application {
     @Suppress("UnstableApiUsage")
-    mainClass.set("${ProjectSettings.projectId}.backend.ApplicationKt")
+    mainClass.set("${ProjectSettings.projectId}.backend.BackendAppKt")
 }

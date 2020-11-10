@@ -5,7 +5,7 @@
 @file:Suppress("SpellCheckingInspection")
 
 object Versions {
-    const val kotlin = "1.4.10"
+    const val kotlin = "1.4.20-RC"
     const val androidPlugin = "4.2.0-alpha16"
     const val androidMaterial = "1.3.0-alpha03"
     const val constraintLayout = "2.0.4"
@@ -13,10 +13,11 @@ object Versions {
     const val ktor = "1.4.1"
     const val logBack = "1.3.0-alpha5"
     const val kotlinXHtml = "0.7.2"
-    const val versionChecker = "0.34.0"
-    const val react = "17.0.0-pre.126-kotlin-1.4.10"
+    const val versionChecker = "0.35.0"
+    const val react = "17.0.0-pre.129-kotlin-1.4.10"
     const val koin = "3.0.0-alpha-4"
     const val kermit = "0.1.8"
+    const val multiplatformSettings = "0.6.3"
 }
 
 object Dependencies {
@@ -26,6 +27,8 @@ object Dependencies {
 
         const val koinCore = "org.koin:koin-core:${Versions.koin}"
         const val kermit = "co.touchlab:kermit:${Versions.kermit}"
+        const val multiplatformSettings =
+            "com.russhwolf:multiplatform-settings:${Versions.multiplatformSettings}"
     }
 
     object Android {
@@ -34,12 +37,12 @@ object Dependencies {
         const val constraintLayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 
-        const val koinAndroid = "org.koin:koin-android:${Versions.koin}"
         const val koinAndroidViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
 
         const val jUnit = "junit:junit:${Versions.jUnit}"
     }
 
+    @Suppress("unused")
     object IOS
 
     object JVM {
@@ -68,8 +71,8 @@ object ClassPaths {
 }
 
 object Modules {
-    const val ui = ":ui"
-    const val data = ":data"
+    const val client = ":client"
+    const val common = ":common"
 }
 
 object Plugins {

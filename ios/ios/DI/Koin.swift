@@ -8,10 +8,12 @@
 
 import Foundation
 import SwiftUI
-import ui
+import client
 
 struct Koin {
-    let koin = KoinIOSKt.doInitIOS().koin
+    let koin = KoinIOSKt.doInitIOS(
+        userDefaults: UserDefaults(suiteName: SettingsRepository.Companion().SETTINGS_NAME)!
+    ).koin
 }
 
 struct KoinKey: EnvironmentKey {

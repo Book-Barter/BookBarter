@@ -1,5 +1,5 @@
 import SwiftUI
-import ui
+import client
 
 struct MainView: View {
     var mainViewModel: MainViewModel
@@ -13,9 +13,11 @@ struct MainView: View {
 
     var body: some View {
         Text(mainViewModel.getPlatformName())
+        Text("\(mainViewModel.runCounter) times ran")
     }
 }
 
+#if DEBUG
 struct MainViewPreviews: PreviewProvider {
     @Environment(\.koin) static var koin: Koin
 
@@ -26,3 +28,4 @@ struct MainViewPreviews: PreviewProvider {
         ).makeForPreviewProvider()
     }
 }
+#endif
